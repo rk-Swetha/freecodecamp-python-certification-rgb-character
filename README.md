@@ -44,3 +44,32 @@ Arin
 STR ●●●○○○○○○○
 INT ●●○○○○○○○○
 CHA ●●○○○○○○○○
+```
+---
+
+## Build a Pin Extractor – freeCodeCamp Challenge
+
+### Description
+This challenge extracts a secret numeric PIN from poems.  
+Each digit of the PIN is formed by counting the number of letters
+in a specific word position for each line of the poem.
+
+### Logic Overview
+- Each poem is split into lines
+- For each line:
+  - The word at index `line_number` is selected
+  - The length of that word becomes a digit in the PIN
+  - If no such word exists, `0` is used
+- One PIN is generated per poem
+
+### Example
+
+```python
+print(pin_extractor([poem, poem2, poem3]))
+
+## Output
+['51420', '44440', '11111']
+```
+
+
+
