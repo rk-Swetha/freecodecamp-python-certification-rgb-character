@@ -39,7 +39,7 @@ The goal of this challenge is to create a function that:
 ```python
 print(create_character("Arin", 3, 2, 2))
 
-**## Output **
+Output
 Arin
 STR ●●●○○○○○○○
 INT ●●○○○○○○○○
@@ -61,15 +61,43 @@ in a specific word position for each line of the poem.
   - The length of that word becomes a digit in the PIN
   - If no such word exists, `0` is used
 - One PIN is generated per poem
-
+---
 ### Example
 
 ```python
 print(pin_extractor([poem, poem2, poem3]))
 
-## Output
+Output
 ['51420', '44440', '11111']
 ```
+---
 
+## Build a Number Pattern Generator – freeCodeCamp Lab
 
+### Description
+This lab focuses on practicing basic Python concepts by generating
+a number pattern using a `for` loop.
 
+### Requirements
+- The function accepts a single integer argument `n`
+- Returns numbers from `1` to `n` separated by spaces
+- Uses a `for` loop
+- Handles invalid input with appropriate error messages
+---
+### Example
+
+```python
+print(number_pattern(5))
+
+Output
+1 2 3 4 5
+```
+---
+### Error Handling
+
+```python
+number_pattern("5")
+
+Output
+Argument must be an integer value.
+```
