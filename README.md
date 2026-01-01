@@ -1,4 +1,4 @@
-# freecodecamp-python-certification-rgb-character
+# freecodecamp-python-certification
 
 # RGB Character – freeCodeCamp Python Certification
 
@@ -100,4 +100,38 @@ number_pattern("5")
 
 Output
 Argument must be an integer value.
+```
+---
+## Build a Medical Data Validator – freeCodeCamp Workshop
+
+### Description
+This workshop task validates structured medical records using
+type checking, regular expressions, and rule-based constraints.
+
+The validator ensures that each medical record follows a strict schema
+and reports detailed validation errors when rules are violated.
+
+---
+
+### Validation Rules
+
+- `patient_id`: string starting with `P` or `p` followed by digits
+- `age`: integer ≥ 18
+- `gender`: `male` or `female` (case-insensitive)
+- `diagnosis`: string or `None`
+- `medications`: list of strings
+- `last_visit_id`: string starting with `V` or `v` followed by digits
+
+---
+
+### Example
+
+```python
+validate(medical_records)
+
+Output - 
+Unexpected format 'patient_id: p1002' at position 1.
+Unexpected format 'last_visit_id: v2302' at position 1.
+Unexpected format 'last_visit_id: v2303' at position 2.
+Valid format.
 ```
