@@ -135,3 +135,47 @@ Unexpected format 'last_visit_id: v2302' at position 1.
 Unexpected format 'last_visit_id: v2303' at position 2.
 Valid format.
 ```
+---
+
+## Build a User Configuration Manager – freeCodeCamp Lab
+
+### Description
+This lab implements a simple user configuration manager that allows
+adding, updating, deleting, and viewing user settings.
+
+All settings are normalized to lowercase internally, while displayed
+settings follow proper formatting rules.
+
+---
+
+### Supported Operations
+
+- **Add Setting**
+  - Adds a new key-value pair if the key does not already exist
+- **Update Setting**
+  - Updates the value of an existing setting
+- **Delete Setting**
+  - Removes a setting if it exists
+- **View Settings**
+  - Displays all settings in a formatted, readable format
+
+---
+
+### Example
+
+```python
+view_settings({
+    'theme': 'dark',
+    'notifications': 'enabled',
+    'volume': 'high'
+})
+```
+---
+### Output
+```python
+Current User Settings:
+Theme: dark
+Notifications: enabled
+Volume: high
+```
+---
