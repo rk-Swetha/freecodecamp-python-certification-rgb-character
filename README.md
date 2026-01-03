@@ -179,3 +179,69 @@ Notifications: enabled
 Volume: high
 ```
 ---
+# Debug an ISBN Validator
+
+## Description
+The ISBN (International Standard Book Number) is a unique identifier assigned to commercial books.  
+An ISBN can be either **10 or 13 digits long**, where the last digit is a **check digit** calculated from the other digits.
+
+This project focuses on debugging and fixing an existing ISBN validator so that it correctly validates **ISBN-10** and **ISBN-13** codes while handling invalid inputs gracefully.  
+This lab is part of the **freeCodeCamp Python Certification**.
+
+---
+
+## Objective
+The goal of this project is to:
+- Validate ISBN-10 and ISBN-13 codes correctly
+- Handle all runtime errors without crashing
+- Display meaningful error messages for invalid inputs
+- Pass all freeCodeCamp test cases successfully
+
+---
+
+## Input Format
+The user must enter input in the following format:
+`ISBN,length`
+
+### Examples
+`1530051126,10`
+`9781530051120,13`
+
+### Notes
+- ISBN should not contain hyphens
+- Length must be either `10` or `13`
+---
+
+## Program Behavior
+Based on the input, the program displays one of the following messages:
+
+ `Valid ISBN Code.`
+ `Invalid ISBN Code.`
+ `ISBN-10 code should be 10 digits long.`
+ `ISBN-13 code should be 13 digits long.`
+ `Invalid character was found.`
+ `Length should be 10 or 13.`
+ `Length must be a number.`
+ `Enter comma-separated values.`
+
+---
+
+## Valid Test ISBNs
+
+### ISBN-10
+`1530051126`
+`9971502100`
+`080442957X`
+
+### ISBN-13
+`9781530051120`
+`9781947172104`
+
+---
+
+## Important Note
+To ensure the freeCodeCamp tests run correctly, the `main()` function call must be commented out:
+
+```python
+# main()
+
