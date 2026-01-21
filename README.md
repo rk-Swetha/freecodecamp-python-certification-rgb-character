@@ -357,4 +357,83 @@ Earth is orbiting around Sun...
 Jupiter is orbiting around Sun...
 Proxima Centauri b is orbiting around Proxima Centauri...
 ```
+---
+## Build an Email Simulator – freeCodeCamp Workshop
 
+### Description
+This workshop simulates a basic **email system** using Python and object-oriented programming concepts.
+
+The program models users, inboxes, and emails, allowing users to send, read, list, and delete emails while tracking read status and timestamps.
+
+---
+
+### Objective
+The goal of this workshop is to:
+- Practice advanced OOP concepts
+- Work with multiple interacting classes
+- Use timestamps with the `datetime` module
+- Track email read/unread state
+- Simulate real-world application behavior
+
+---
+
+### System Components
+
+#### `Email` Class
+- Stores sender, receiver, subject, body, timestamp, and read status
+- Marks emails as read when opened
+- Displays full email details
+- Implements `__str__` for summary display
+
+#### `Inbox` Class
+- Stores received emails
+- Lists all emails
+- Reads individual emails
+- Deletes emails safely with index validation
+
+#### `User` Class
+- Owns an inbox
+- Sends emails to other users
+- Reads and deletes emails from inbox
+
+---
+
+### Example Usage
+
+```python
+tory = User('Tory')
+ramy = User('Ramy')
+
+tory.send_email(ramy, 'Hello', 'Hi Ramy, just saying hello!')
+ramy.send_email(tory, 'Re: Hello', 'Hi Tory, hope you are fine.')
+
+ramy.check_inbox()
+ramy.read_email(1)
+ramy.delete_email(1)
+ramy.check_inbox()
+```
+---
+### Output
+```text
+Email sent from Tory to Ramy!
+
+Email sent from Ramy to Tory!
+
+Ramy's Inbox:
+
+Your Emails:
+1. [Unread] From: Tory | Subject: Hello | Time: 2026-01-21 16:54
+
+--- Email ---
+From: Tory
+To: Ramy
+Subject: Hello
+Received: 2026-01-21 16:54
+Body: Hi Ramy, just saying hello!
+------------
+
+Email deleted.
+
+Ramy's Inbox:
+Your inbox is empty.
+```
