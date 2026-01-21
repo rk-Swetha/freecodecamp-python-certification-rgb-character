@@ -292,4 +292,69 @@ The Trumpet is fun to play!
 The Trumpet is part of the brass family of instruments.
 ```
 ---
+## Build a Planet Class – freeCodeCamp Lab
+
+### Description
+This lab focuses on practicing **Object-Oriented Programming (OOP)** concepts in Python by building a `Planet` class.
+
+The program validates constructor arguments, raises appropriate exceptions, and demonstrates how to use special methods like `__str__` along with instance methods.
+
+---
+
+### Objective
+The goal of this lab is to:
+- Create a Python class with proper initialization
+- Validate input using exceptions
+- Use instance attributes and methods
+- Implement the `__str__` method
+- Create and interact with multiple objects
+
+---
+
+### Class Requirements
+
+#### `Planet` Class
+- Accepts `name`, `planet_type`, and `star` as parameters
+- Raises:
+  - `TypeError` if any argument is not a string
+  - `ValueError` if any argument is an empty string
+- Stores values as instance attributes
+
+#### Methods
+- `orbit()`  
+  Returns:  
+  `{name} is orbiting around {star}...`
+
+- `__str__()`  
+  Returns:  
+  `Planet: {name} | Type: {planet_type} | Star: {star}`
+
+---
+
+### Example Usage
+
+```python
+planet_1 = Planet("Earth", "Terrestrial", "Sun")
+planet_2 = Planet("Jupiter", "Gas giant", "Sun")
+planet_3 = Planet("Proxima Centauri b", "Exoplanet", "Proxima Centauri")
+
+print(planet_1)
+print(planet_2)
+print(planet_3)
+
+print(planet_1.orbit())
+print(planet_2.orbit())
+print(planet_3.orbit())
+```
+---
+
+### Output
+```python
+Planet: Earth | Type: Terrestrial | Star: Sun
+Planet: Jupiter | Type: Gas giant | Star: Sun
+Planet: Proxima Centauri b | Type: Exoplanet | Star: Proxima Centauri
+Earth is orbiting around Sun...
+Jupiter is orbiting around Sun...
+Proxima Centauri b is orbiting around Proxima Centauri...
+```
 
