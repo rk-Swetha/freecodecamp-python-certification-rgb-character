@@ -244,4 +244,52 @@ To ensure the freeCodeCamp tests run correctly, the `main()` function call must 
 
 ```python
 # main()
+```
+---
+## Build a Musical Instrument Inventory – freeCodeCamp Workshop
+
+### Description
+This workshop introduces **Object-Oriented Programming (OOP)** concepts in Python by building a simple musical instrument inventory system.
+
+The program defines a `MusicalInstrument` class that stores details about an instrument and provides methods to interact with it.
+
+---
+
+### Objective
+The goal of this workshop is to:
+- Practice creating Python classes
+- Use the `__init__` constructor
+- Define instance methods
+- Create and use multiple objects
+
+---
+
+### Features
+- Store instrument name and instrument family
+- Display a message when an instrument is played
+- Return an informational fact about the instrument
+
+---
+
+### Example Usage
+
+```python
+instrument_1 = MusicalInstrument('Oboe', 'woodwind')
+instrument_2 = MusicalInstrument('Trumpet', 'brass')
+
+instrument_1.play()
+print(instrument_1.get_fact())
+
+instrument_2.play()
+print(instrument_2.get_fact())
+```
+---
+### Output
+```python
+The Oboe is fun to play!
+The Oboe is part of the woodwind family of instruments.
+The Trumpet is fun to play!
+The Trumpet is part of the brass family of instruments.
+```
+---
 
