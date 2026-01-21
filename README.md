@@ -437,3 +437,40 @@ Email deleted.
 Ramy's Inbox:
 Your inbox is empty.
 ```
+---
+### Class Interaction Diagram
+
+```mermaid
+classDiagram
+    class User {
+        +name
+        +send_email()
+        +check_inbox()
+        +read_email()
+        +delete_email()
+    }
+
+    class Inbox {
+        +emails
+        +receive_email()
+        +list_emails()
+        +read_email()
+        +delete_email()
+    }
+
+    class Email {
+        +sender
+        +receiver
+        +subject
+        +body
+        +timestamp
+        +read
+        +mark_as_read()
+        +display_full_email()
+    }
+
+    User "1" --> "1" Inbox : owns
+    Inbox "1" --> "*" Email : contains
+    User --> Email : creates
+```
+
