@@ -473,4 +473,137 @@ classDiagram
     Inbox "1" --> "*" Email : contains
     User --> Email : creates
 ```
+---
+# Budget App (freeCodeCamp Certification Project)
+
+## Description
+The Budget App is a simple Python application that helps track spending across different budget categories. It allows users to deposit money, withdraw funds, transfer amounts between categories, and visualize spending distribution using a text-based bar chart.
+
+This project is part of the **freeCodeCamp Python Certification** and focuses on object-oriented programming, data handling, and string formatting.
+
+---
+
+## Objective
+To build a budget management system that:
+- Tracks financial transactions per category
+- Prevents overspending using balance checks
+- Displays a formatted ledger for each category
+- Generates a percentage-based spending chart
+
+---
+
+## User Stories (Short)
+- Create a `Category` class to manage budget categories
+- Store all transactions in a ledger
+- Allow deposits, withdrawals, and transfers
+- Prevent withdrawals when funds are insufficient
+- Print category details in a formatted output
+- Generate a spending percentage chart across categories
+
+---
+
+## System Components
+
+### 1. Category Class
+Responsible for managing individual budget categories.
+
+**Attributes:**
+- `name` – category name
+- `ledger` – list of all transactions
+
+**Methods:**
+- `deposit(amount, description)`
+- `withdraw(amount, description)`
+- `transfer(amount, category)`
+- `check_funds(amount)`
+- `get_balance()`
+- `__str__()` – formatted category output
+
+---
+
+### 2. create_spend_chart(categories)
+A standalone function that:
+- Calculates total spending per category
+- Computes percentage spent (rounded down to nearest 10)
+- Builds a vertical bar chart using text
+
+---
+
+## Example Usage
+
+```python
+food = Category("Food")
+clothing = Category("Clothing")
+auto = Category("Auto")
+
+food.deposit(1000, "deposit")
+food.withdraw(105.55)
+food.withdraw(15.89)
+
+clothing.deposit(500)
+clothing.withdraw(33.40)
+
+auto.deposit(1000)
+auto.withdraw(50)
+
+print(food)
+print(create_spend_chart([food, clothing, auto]))
+```
+---
+### Output
+```text
+*************Food*************
+deposit                1000.00
+                        -105.55
+                        -15.89
+Total: 878.56
+
+Percentage spent by category
+100|          
+ 90|          
+ 80|          
+ 70|          
+ 60| o        
+ 50| o        
+ 40| o        
+ 30| o        
+ 20| o  o     
+ 10| o  o  o  
+  0| o  o  o  
+    ----------
+     F  C  A  
+     o  l  u  
+     o  o  t  
+     d  t  o  
+        h     
+        i     
+        n     
+        g     
+```
+---
+---
+### UML Diagram (Mermaid)
+
+```mermaid
+classDiagram
+    class Category {
+        +name
+        +ledger
+        +deposit(amount, description)
+        +withdraw(amount, description)
+        +transfer(amount, category)
+        +check_funds(amount)
+        +get_balance()
+        +__str__()
+    }
+
+    class create_spend_chart {
+        <<function>>
+        +categories
+    }
+
+    Category --> create_spend_chart : provides spending data
+```
+
+
 
